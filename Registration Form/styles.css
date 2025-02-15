@@ -21,6 +21,24 @@ form {
   padding-bottom: 2em;
 }
 
+legend {
+  padding-top: 30px;
+}
+
+/* Add a line between age input and radio buttons */
+.form-group#age-section {
+  border-bottom: 2px solid #e0eaf4; /* Light line */
+  margin-bottom: 1.25rem; /* Space below the line */
+  padding-bottom: 1.25rem; /* Space between input and line */
+}
+
+/* Add a line between checkboxes and comment section */
+.form-group#checkbox-section {
+  border-bottom: 2px solid #e0eaf4; /* Light line */
+  margin-bottom: 1.25rem; /* Space below the line */
+  padding-bottom: 1.25rem; /* Space between checkboxes and line */
+}
+
 fieldset {
   border: none;
   padding: 2rem 0;
