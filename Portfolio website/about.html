@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Hamburger Menu and Navigation -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Your introduction and bio go here...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sem van Schoonhoven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu function for opening/closing the menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Toggle the 'open' class to show or hide the menu
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

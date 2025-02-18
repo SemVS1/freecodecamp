@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="landing">
+        <h1>Welcome to</h1>
+        <h2>MY PORTFOLIO</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas purus nibh, volutpat ac condimentum auctor, condimentum eget metus. Integer commodo nisi arcu, eu placerat lacus mattis in. In non nisi et dolor auctor pharetra. Mauris vitae nulla nec nunc ultrices ullamcorper. Mauris vehicula semper diam, id condimentum lorem lobortis elementum. Duis sollicitudin tristique felis sit amet vestibulum. Sed blandit est non dapibus pretium. Etiam id rutrum lectus. In ut consequat diam. Sed tincidunt luctus viverra. Suspendisse at sagittis leo. Cras faucibus euismod lorem, quis imperdiet turpis efficitur vitae.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sem van Schoonhoven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu function for opening/closing the menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Toggle the 'open' class to show or hide the menu
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+

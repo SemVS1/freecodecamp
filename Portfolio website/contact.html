@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Hamburger Menu and Navigation -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email: 516712@vistacollege.nl</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/sem-van-schoonhoven-95875132b/" target="_blank">My LinkedIn</a></li>
+            <li>GitHub: <a href="https://github.com/SemVS1" target="_blank">My GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sem van Schoonhoven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu function for opening/closing the menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Toggle the 'open' class to show or hide the menu
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+
+        // Function to load the nav.html content into the header (if you prefer to load it from a separate file)
+        window.onload = function() {
+            fetch('nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                });
+        };
+    </script>
+</body>
+</html>

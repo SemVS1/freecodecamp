@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Hamburger Menu and Navigation -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div id="projects-list">
+            <!-- Dynamic projects will go here -->
+        </div>
+        <button id="add-project-btn">Add New Project</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sem van Schoonhoven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu function for opening/closing the menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Toggle the 'open' class to show or hide the menu
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+
+        // Sample dynamic project creation
+        document.getElementById('add-project-btn').addEventListener('click', function() {
+            const projectsList = document.getElementById('projects-list');
+            const newProject = document.createElement('div');
+            newProject.classList.add('project');
+            newProject.innerHTML = `<h3>New Project</h3><p>Project description goes here...</p>`;
+            projectsList.appendChild(newProject);
+        });
+    </script>
+</body>
+</html>
